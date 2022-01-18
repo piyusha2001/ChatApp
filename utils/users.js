@@ -19,5 +19,8 @@ function userLeave(id) {
 		return users.splice(index, 1);
 	}
 }
-
-module.exports = { userJoin, getCurrentUser, userLeave };
+//Get room users
+function getRoomUsers(room) {
+	return users.filter((user) => user.room === room);
+}
+module.exports = { userJoin, getCurrentUser, userLeave, getRoomUsers };
