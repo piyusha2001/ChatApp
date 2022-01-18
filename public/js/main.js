@@ -34,7 +34,6 @@ chatForm.addEventListener('submit', (e) => {
 });
 
 //output message to Dom
-
 function outputMessage(message) {
 	const div = document.createElement('div');
 	div.classList.add('message');
@@ -49,6 +48,8 @@ function outputMessage(message) {
 function outputRoomName(room) {
 	roomName.innerText = room;
 }
+
+//Add user list to DOM
 function outputUsers(users) {
 	userList.innerHTML = `
     ${users.map((user) => `<li>${user.username}</li>`).join('')}`;
