@@ -1,6 +1,6 @@
 # ChatApp
 
-Chat App is a real time chat application made using Node.js , Express.js and Socket.io . 
+Chat App is a real time chat application made using Node.js, Express.js and Socket.io . 
 
 The App provides functionality of joining specific rooms and chatting with users in that room .
 
