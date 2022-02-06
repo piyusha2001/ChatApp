@@ -10,7 +10,7 @@ const {
 	getRoomUsers,
 } = require('./utils/users');
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const port = 3000 || process.env.PORT;
 const server = http.createServer(app);
 const io = socketio(server);
 
@@ -61,4 +61,4 @@ io.on('connection', (socket) => {
 	});
 });
 
-server.listen(PORT, () => console.log('Server running on  3000'));
+server.listen(port, () => console.log('Server running on  3000'));
