@@ -10,7 +10,6 @@ const {
 	getRoomUsers,
 } = require('./utils/users');
 const app = express();
-const port = 3000 || process.env.PORT;
 const server = http.createServer(app);
 const io = socketio(server);
 
@@ -61,4 +60,10 @@ io.on('connection', (socket) => {
 	});
 });
 
-server.listen(port, () => console.log('Server running on  3000'));
+server.listen(process.env.PORT || 3000, function () {
+	console.log(
+		'Express server listening on port %d in %s mode',
+		this.address().port,
+		app.settings.env,
+	);
+});
